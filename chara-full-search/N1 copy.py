@@ -1,23 +1,14 @@
-# S = input()
-# c = input()
-
-# if c in S:
-#     print('Yes')
-# else:
-#     print('No')
-
 # データを受け取る
 S = input()
-c = input()
 
 # S の長さを取得する
 N = len(S)
 
 # 線形探索
-flag = False
+flag = True
 for i in range(N):
-    if S[i] == c:
-        flag = True
+    if S[i] != S[(N-1)-i]:
+        flag = False
 
 # 答えを出力する
 if flag: print("Yes")
