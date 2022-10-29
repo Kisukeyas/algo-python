@@ -21,4 +21,4 @@ for i in range(N):
 
 # 答えを出力する
 if flag: print("Yes")
-else: print("No")
+else: print("No") 
