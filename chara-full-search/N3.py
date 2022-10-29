@@ -4,12 +4,12 @@ S = input()
 # S の長さを取得する
 N = len(S)
 
+cnt = 0
+
 # 線形探索
-flag = True
-for i in range(N):
-    if S[i] != S[(N-1)-i]:
-        flag = False
+for i in range(N-1):
+    if S[i] == S[i+1]:
+        cnt += 1
 
 # 答えを出力する
-if flag: print("Yes")
-else: print("No")
+print(cnt)
