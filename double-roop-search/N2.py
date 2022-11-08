@@ -11,7 +11,7 @@ for x in A:
     else:
         for i in range(2,x):
             if x%i==0:
-                is_prime = False
+                
     # 素数ならば 1 を足す
     if is_prime:
         counter += 1
