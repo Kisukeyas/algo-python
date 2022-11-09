@@ -1,5 +1,5 @@
 # データを受け取る
-A, B = map(int, input().split()) 
+A, B = map(int, input().split())
 cnt = 0
 # 数値の全探索
 max = B

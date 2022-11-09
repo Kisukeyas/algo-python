@@ -1,20 +1,16 @@
 # データを受け取る
-N = int(input())
-A = list(map(int, input().split()))
+N, K = map(int, input().split())
+
+Ans = 0
 
 # 配列の全探索
-counter = 0
-for x in A:
-    # 素数判定 (数字の全探索)
-    is_prime = True
-    if x == 1: is_prime = False
-    else:
-        for i in range(2,x):
-            if x%i==0:
-                
-    # 素数ならば 1 を足す
-    if is_prime:
-        counter += 1
 
-# 答えを出力する
-print(counter)
+for i in range(1, N+1):
+    counter = 0
+    for j in range(1, i+1):
+        if i % j == 0:
+            counter += 1
+    if counter == K:
+        Ans += 1
+
+print(Ans)
