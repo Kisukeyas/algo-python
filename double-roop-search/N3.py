@@ -1,14 +1,19 @@
 # データを受け取る
-N, K = map(int, input().split())
+L, R = map(int, input().split())
 
-Ans = 0
+# 数字の全探索
+count = 0
+for x in range(L, R+1):
+    # x が回文数かを調べる
+    S = str(x)
+    flag = True
+    N = len(S)
+    for i in range(N):
+        if S[i] != S[(N-1)-i]:
+            flag = False
+    # x が回文数ならば 1 を足す
+    if flag:
+        count += 1
 
-# 配列の全探索
-
-for i in range(1, N+1):
-    counter = 0
-    for j in range(1, i+1):
-        if i % j == 0:
-            counter += 1
-
-print(Ans)
+# 答えを出力する
+print(count)
