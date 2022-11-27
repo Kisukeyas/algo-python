@@ -1,17 +1,17 @@
 # データを受け取る
-S = input()
-N = len(S)
+N = int(input())
+S = [input() for _ in range(N)]
 
-# 文字の全探索
+# 配列の全探索
 count = 0
-for x in range(ord('a'), ord('z')+1):
-    c = chr(x)
-    # S に c が含まれるかを調べる
-    flag = False
+for x in S:
+    # x が回文かを調べる
+    flag = True
+    N = len(x)
     for i in range(N):
-        if S[i] == c:
-            flag = True
-    # S に c が含まれるならば 1 を足す
+        if x[i] != x[(N-1)-i]:
+            flag = False
+    # x が回文ならば 1 を足す
     if flag:
         count += 1
 
